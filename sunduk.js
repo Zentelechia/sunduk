@@ -5,7 +5,7 @@
 
         ServiceConfiguration.configurations.insert({
             service: 'vk',
-            appId:   '5185648',      // Your app id
-            secret:  'Cf3RVkhVGgClsFpqdOuf' // Your app secret
+            appId:   '5185708',      // Your app id
+            secret:  'UNGn1f6zRGdSJnhIJPyp' // Your app secret
         });
     }
