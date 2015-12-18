@@ -1,4 +1,4 @@
-var Friends=FacebookCollections.getFriends("me"); 
+/*var Friends=FacebookCollections.getFriends("me"); 
 var myFriends=Friends.find().fetch();
 
 Template.login.events({
@@ -28,3 +28,13 @@ Template.friends.helpers({
 Deps.autorun(function(){
     var posts = Friends.find().fetch();
 });
+*/
+if(Meteor.isClient) {
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1740318656189950',
+      status     : true,
+      xfbml      : true
+    });
+  };
+}

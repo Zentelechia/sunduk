@@ -1,4 +1,5 @@
-﻿ServiceConfiguration.configurations.remove({
+﻿/*
+ServiceConfiguration.configurations.remove({
     service: 'facebook'
 });
  
@@ -8,3 +9,4 @@ ServiceConfiguration.configurations.insert({
     secret: 'db06844928e9cb57bf03eb4d53834aba',
     requestPermissions: ['user_friends']
 });
+*/
