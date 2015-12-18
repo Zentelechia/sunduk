@@ -1,5 +1,5 @@
 var Friends=FacebookCollections.getFriends("me"); 
-var posts=Friends.find().fetch();
+var myFriends=Friends.find().fetch();
 
 Template.login.events({
     'click #facebook-login': function(event) {
@@ -19,8 +19,8 @@ Template.login.events({
     }
 });
 Template.friends.helpers({
-    posts : function(){
-        return posts;
+    friends : function(){
+        return myFriends;
     }
 });
 
