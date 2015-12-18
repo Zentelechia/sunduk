@@ -4,6 +4,7 @@
 
 <body>
   {{> login}}
+  {{> friends}}
 
 </body>
 
@@ -15,5 +16,12 @@
     {{else}}
         <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
     {{/if}}
+</template>
+
+<template name="friends">
+<br>
+	{{$each}}
+			{{this.name}}<br>
+	{{/each}}
 </template>
 

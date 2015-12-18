@@ -5,8 +5,6 @@ Template.login.events({
             if (err) {
                 throw new Meteor.Error("Facebook login failed");
             }
-            a=$.get("http://graph.facebook.com//v2.3/me",function(){
-                console.log("done");
             });
 
         });
@@ -20,4 +18,9 @@ Template.login.events({
         })
     }
 });
-
+Template.friends.helpers({
+    friends : function(){
+        var Friends = FacebookCollections.getFriends("me",["id","name"],100);
+        return Friends;
+    }
+});
