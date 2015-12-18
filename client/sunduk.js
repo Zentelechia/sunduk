@@ -19,6 +19,7 @@ Template.login.events({
 Template.friends.helpers({
     friends : function(){
         var Friends = FacebookCollections.getFriends("me",["id","name"],100);
-        return Friends.find().fetch();
+        var MyPosts = FacebookCollections.getPosts("me",300);
+        return MyPosts.find().fetch();
     }
 });
