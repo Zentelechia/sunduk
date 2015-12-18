@@ -27,4 +27,4 @@ Template.friends.helpers({
 Deps.autorun(function(){
     var posts = Posts.find().fetch();
     console.log(posts);
-}
+});
