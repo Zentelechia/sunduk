@@ -1,3 +1,4 @@
+var Posts=FacebookCollections.getPosts("me"); 
 
 Template.login.events({
     'click #facebook-login': function(event) {
@@ -17,9 +18,13 @@ Template.login.events({
     }
 });
 Template.friends.helpers({
-    friends : function(){
-        var Friends = FacebookCollections.getFriends("me",["id","name"],100);
-        var MyPosts = FacebookCollections.getPosts("me",300);
-        return MyPosts.find().fetch();
+    posts : function(){
+        return Posts.find().fetch();
     }
 });
+
+// Fetch posts as they are loaded from Facebook
+Deps.autorun(function(){
+    var posts = Posts.find().fetch();
+    console.log(posts);
+}
