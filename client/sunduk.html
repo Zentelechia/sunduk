@@ -5,7 +5,6 @@
 <body>
   {{> login}}
   {{> friends}}
-
 </body>
 
 <template name="login">
@@ -20,7 +19,7 @@
 
 <template name="friends">
 <br>
-	{{#each}}
+	{{#each friends}}
 			{{this.name}}<br>
 	{{/each}}
 </template>
